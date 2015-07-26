@@ -37,91 +37,17 @@ The script is organized as follows:
 10. Cleanup: Remove unused data objects and values  
 11. Output data set into new file  
 
-###### Variables
-data_summary (data frame): 180 Observations with 68 variables  
-
-
-	VARIABLE | CLASS	| DESCRIPTION   
-	--- | --- | ---    
-	activity_desc | factor | Activity that was performed when readings were taken (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)  
-	subject | factor | Number representing the participant who engaged in the observation  
-	time_Body_Acceleration-Mean-X	|	num |  
-	time_Body_Acceleration-Mean-Y	|	num |  
-	time_Body_Acceleration-Mean-Z	|	num |  
-	time_Gravity_Acceleration-Mean-X	|	num |  
-	time_Gravity_Acceleration-Mean-Y	|	num |  
-	time_Gravity_Acceleration-Mean-Z	|	num |  
-	time_Body_AccelerationJerk-Mean-X	|	num |  
-	time_Body_AccelerationJerk-Mean-Y	|	num |  
-	time_Body_AccelerationJerk-Mean-Z	|	num |  
-	time_Body_Gyro-Mean-X	|	num |  
-	time_Body_Gyro-Mean-Y	|	num |  
-	time_Body_Gyro-Mean-Z	|	num |  
-	time_Body_GyroJerk-Mean-X	|	num |  
-	time_Body_GyroJerk-Mean-Y	|	num |  
-	time_Body_GyroJerk-Mean-Z	|	num |  
-	time_Body_AccelerationMagnitude-Mean	|	num |  
-	time_Gravity_AccelerationMagnitude-Mean	|	num |  
-	time_Body_AccelerationJerkMagnitude-Mean	|	num |  
-	time_Body_GyroMagnitude-Mean	|	num |  
-	time_Body_GyroJerkMagnitude-Mean	|	num |  
-	frequency_Body_Acceleration-Mean-X	|	num |  
-	frequency_Body_Acceleration-Mean-Y	|	num |  
-	frequency_Body_Acceleration-Mean-Z	|	num |  
-	frequency_Body_AccelerationJerk-Mean-X	|	num |  
-	frequency_Body_AccelerationJerk-Mean-Y	|	num |  
-	frequency_Body_AccelerationJerk-Mean-Z	|	num |  
-	frequency_Body_Gyro-Mean-X	|	num |  
-	frequency_Body_Gyro-Mean-Y	|	num |  
-	frequency_Body_Gyro-Mean-Z	|	num |  
-	frequency_Body_AccelerationMagnitude-Mean	|	num |  
-	frequency_Body_BodyAccelerationJerkMagnitude-Mean	|	num |  
-	frequency_Body_BodyGyroMagnitude-Mean	|	num |  
-	frequency_Body_BodyGyroJerkMagnitude-Mean	|	num |  
-	time_Body_Acceleration-StandardDev-X	|	num |  
-	time_Body_Acceleration-StandardDev-Y	|	num |  
-	time_Body_Acceleration-StandardDev-Z	|	num |  
-	time_Gravity_Acceleration-StandardDev-X	|	num |  
-	time_Gravity_Acceleration-StandardDev-Y	|	num |  
-	time_Gravity_Acceleration-StandardDev-Z	|	num |  
-	time_Body_AccelerationJerk-StandardDev-X	|	num |  
-	time_Body_AccelerationJerk-StandardDev-Y	|	num |  
-	time_Body_AccelerationJerk-StandardDev-Z	|	num |  
-	time_Body_Gyro-StandardDev-X	|	num |  
-	time_Body_Gyro-StandardDev-Y	|	num |  
-	time_Body_Gyro-StandardDev-Z	|	num |  
-	time_Body_GyroJerk-StandardDev-X	|	num |  
-	time_Body_GyroJerk-StandardDev-Y	|	num |  
-	time_Body_GyroJerk-StandardDev-Z	|	num |  
-	time_Body_AccelerationMagnitude-StandardDev	|	num |  
-	time_Gravity_AccelerationMagnitude-StandardDev	|	num |  
-	time_Body_AccelerationJerkMagnitude-StandardDev	|	num |  
-	time_Body_GyroMagnitude-StandardDev	|	num |  
-	time_Body_GyroJerkMagnitude-StandardDev	|	num |  
-	frequency_Body_Acceleration-StandardDev-X	|	num |  
-	frequency_Body_Acceleration-StandardDev-Y	|	num |  
-	frequency_Body_Acceleration-StandardDev-Z	|	num |  
-	frequency_Body_AccelerationJerk-StandardDev-X	|	num |  
-	frequency_Body_AccelerationJerk-StandardDev-Y	|	num |  
-	frequency_Body_AccelerationJerk-StandardDev-Z	|	num |  
-	frequency_Body_Gyro-StandardDev-X	|	num |  
-	frequency_Body_Gyro-StandardDev-Y	|	num |  
-	frequency_Body_Gyro-StandardDev-Z	|	num |  
-	frequency_Body_AccelerationMagnitude-StandardDev	|	num |  
-	frequency_Body_BodyAccelerationJerkMagnitude-StandardDev	|	num |  
-	frequency_Body_BodyGyroMagnitude-StandardDev	|	num |  
-	frequency_Body_BodyGyroJerkMagnitude-StandardDev	|	num |  
-
-
-
 
 #### dataSummary.txt
 ###### Description
 Output file of run_analysis.R.  This outputs a tidy data set of the "data_summary" object described above  
 
 
+####CodeBook.MD
+###### Description
+A file that describes the variables used during run_analysis.R and the output of dataSummary.txt
 
 
 #### README.MD
 ###### Description
-This file.  A description of files, variables, and summaries.
+This file.  A description of files contained in this repository
