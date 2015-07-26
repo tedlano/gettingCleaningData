@@ -35,7 +35,7 @@ test_y_file <- "y_test.txt"
 # 2.  Read in Data Files
 ###############################################################################
 
-## 2.1 Read in features and activity_labels files
+## 2.1 Read in features.txt and activity_labels.txt files
 features <- read.table(paste(local_dir, data_dir, features_file, sep=""))
 activity_labels <- read.table(paste(local_dir, data_dir, activity_labels_file, sep=""))
 
@@ -58,20 +58,20 @@ test_y <- read.table(paste(local_dir, data_dir, test_dir, test_y_file, sep=""))
 colnames(train_x) <- features$V2
 colnames(test_x) <- features$V2
 
-## 3.2 Add in activity code column for train and test data
+## 3.2 Create "activity_code" column for train and test data
 train_x$activity_code <- train_y$V1
 test_x$activity_code <- test_y$V1
 
-## 3.3 Add in subject column for train and test data
+## 3.3 Create "subject" column for train and test data
 train_x$subject <- train_subject$V1
 test_x$subject <- test_subject$V1
 
 
 ###############################################################################
-# 4. Merge Data: activity_labels and train_x / test_x
+# 4. Merge activity_labels data with train_x data and train_y data
 ###############################################################################
 
-## 4.1 Rename column names in "activity_labels" data, used to join to train_x and test_x
+## 4.1 Rename column names in "activity_labels" data, used to join with train_x and test_x
 library(data.table)
 setnames(activity_labels, old=c("V1","V2"), new=c("activity_code", "activity_desc"))
 
@@ -90,7 +90,7 @@ data_merge <- rbind(train_clean, test_clean)
 
 
 ###############################################################################
-# 6. Cleanup: Remove unused data obhects and values
+# 6. Cleanup: Remove unused data objects and values
 ###############################################################################
 rm(
   train_clean,
@@ -147,7 +147,7 @@ rm(
 
 
 ###############################################################################
-# 9. Create Factor Variables
+# 9. Create Factor Variables, Reshape Data, Rename Columns
 ###############################################################################
 
 ## 9.1 Turn "activity_desc" and "subject" into factor variables
